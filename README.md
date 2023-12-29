@@ -1,1 +1,1 @@
-# A sample portfolio of Shijil using HTML.
+# A sample portfolio using HTML contains header,body and footer.
