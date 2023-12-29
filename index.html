@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" style="scroll-behavior: smooth;">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shijil Shamsu</title>
+    <link rel="icon" type="image/jpg" href="{% static 'sources/webicon.jpg'%}">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -32,6 +34,9 @@
                               <a class="nav-link text-white" href="#">Experiences</a>
                             </li>
                             <li class="nav-item">
+                              <a class="nav-link text-white" href="#purchase_section">Purchase</a>
+                            </li>
+                            <li class="nav-item">
                               <a class="nav-link text-white" href="#contact_section">Contact</a>
                             </li>
                           </ul>
@@ -42,7 +47,7 @@
         </header>
 
 
-        <section class="" style="padding: 10em;">
+        <section class="" style="padding: 10em; background-color: rgb(211, 204, 204);">
           <div class="container">
           <div class="row align-items-center">
             <div class="col-md-6">
@@ -61,7 +66,7 @@
             </div>
 
           </section>
-            <section id="profile_section">
+            <section id="profile_section" style="padding: 5em;">
               <div class="container">
                 <div class="row">
                   <div class="col-md-6">
@@ -77,7 +82,7 @@
           </div>
         </section>
 
-        <section class="" id="service_section">
+        <section class="" id="service_section" style="padding: 5em;">
           <div class="container">
             <h1 class="text-center">Services</h1>
             <div class="row mt-3">
@@ -156,6 +161,47 @@
           </div>
         </section>
 
+        <section id="purchase_section" style="padding: 5em;">
+          <h2 class="ml-3 mt-4 text-center">New Software Releases with Pricing</h2>
+          <div class="container mt-3">
+            <div class="row mt-4">
+            <div class="col-md-4">
+              <div class="card mr-2" style="width: 20em;">
+              <center><img class="card-img-top" style="width:15em;"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwkCFKiIqAYAiHkp_UHZZ1-A8k0ptjNh540Q&usqp=CAU" alt="Card image cap"></center>
+              <div class="card-body">
+                <h5 class="card-title">Adobe Softwares</h5>
+                <p class="card-text">Adobe softwares like Photoshop, Illustrator, Premier Pro are available with free updates</p>
+                <h3>700$</h3>
+                <a href="#" class="btn btn-primary">Buy</a>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="card mr-2" style="width: 20em;">
+              <center><img class="card-img-top" style="width:15em;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDeArJhO7jWN5ExBLHUouY6fg2p2FR0Pt6hg&usqp=CAU" alt="Card image cap"></center>
+              <div class="card-body">
+                <h5 class="card-title">Quick Heal Antivirus</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h3 id="price">400$</h3>
+                <a href="#" class="btn btn-primary">Buy</a>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="card mr-2" style="width: 20em;">
+              <center><img class="card-img-top text-center" style="width:15em; height: 15em;" src="data:image/png;base64,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" alt="Card image cap"></center>
+              <div class="card-body">
+                <h5 class="card-title">MS Office Suites</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h3>560$</h3>
+                <a href="#" class="btn btn-primary">Buy</a>
+              </div>
+            </div>
+          </div>
+          </div>
+            </div>
+        </section>
+
 
         <section id="contact_section">
         <div class="container mt-5">
@@ -202,13 +248,13 @@
 
     <!-- Right -->
     <div class="text-md-start">
-      <a href="" class="ml-4">
+      <a href="https://www.facebook.com/shiji2shijil" class="ml-4">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="" class="ml-4">
+      <a href="http://www.gmail.com" class="ml-4">
         <i class="fab fa-google"></i>
       </a>
-      <a href="" class="ml-4">
+      <a href="https://www.instagram.com/shijil_cricketcore" class="ml-4">
         <i class="fab fa-instagram"></i>
       </a>
       <a href="" class="ml-4">
